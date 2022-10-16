@@ -151,7 +151,7 @@ $msg='
             <button><span>Tous nos services </span></button></a>
     </div>
      <section id="banner" class="parallax">
-        <h1> Vous avez un problème, Dnautiques est là pour vous ! </h1>
+        <h1> Vous avez un problème, Dnautique est là pour vous ! </h1>
       </section>
 
     <!--  Contact -->
