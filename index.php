@@ -82,7 +82,7 @@ $msg='
 <nav class="navbar navbar-expand-lg py-3 navbar-light bg-light shadow-sm fixed-top">
   <div class="container">
     <a href="./index.php" class="navbar-brand">
-      <img src="./ressources/LOGO.svg" width="45" alt="" class="d-inline-block align-middle mr-2">
+      <img src="Location/Sources/LOGO.svg" width="45" alt="" class="d-inline-block align-middle mr-2">
       <span class="font-weight-bold" style="color: #1c306e ;">D</span><span class="font-weight-bold" style="color: #1880ad ;">nautique</span>
     </a>
 

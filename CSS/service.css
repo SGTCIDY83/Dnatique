@@ -280,3 +280,17 @@ border-radius: 25%;
   padding-bottom: 50px ;
 
 }
+
+.h7,h7{
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    /* effet de survol texte */
+
+}
+.h7:hover{
+    transition: opacity 0.9s;
+    opacity: 0.5;
+
+}
