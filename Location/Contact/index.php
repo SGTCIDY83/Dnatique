@@ -1,17 +1,79 @@
+<?php
+if(isset($_POST['mailform'])) {
+    if(!empty($_POST['nom']) AND !empty($_POST['mail']) AND !empty($_POST['message']) AND !empty($_POST['phone']) AND !empty($_POST['motifs'])) {
+        $header="MIME-Version: 1.0\r\n";
+        $header.='From:"Dnautiques"'."\n";
+        $header.='Content-Type:text/html; charset="uft-8"'."\n";
+        $header.='Content-Transfer-Encoding: 8bit';
+        $message='
+<html>
+   <body>
+      <div align="center">
+         <br />
+          <u>Nom de l\'expéditeur :</u>'.$_POST['nom'].'<br />
+          <u>Mail de l\'expéditeur :</u>'.$_POST['mail'].'<br />
+          <u>Téléphone de l\'expéditeur :</u>'.$_POST['phone'].'<br />
+          <u>Motifs de l\expéditeur :</u>'.$_POST['motifs'].'<br />
+          
+         <br />
+         '.nl2br($_POST['message']).'
+         <br />
+      </div>
+   </body>
+</html>
+';
+
+        mail("dnautique.fr@gmail.com", "Mail Dnautiques", $message, $header);
+        $msg='
+<html>
+   <body>
+      <div class="alert alert-success" role="alert">
+        Message envoyé!
+       </div>
+    </body>
+</html>';
+    }
+    else{
+
+        $msg='
+  <html>
+    <body>
+      <div class="alert alert-danger" role="alert">
+        Tous les champs doivent être complétés !
+      </div>
+    </body>
+ </html>
+ ';
+    }
+}
+?>
+
 
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dnautique - Locations</title>
-  <meta name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'><link rel="stylesheet" href="./style.css">
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="google-site-verification" content="7qVPvHOgnfw_RPPYYq805gF-p8nF2UYJTGjh0r_cyO0" />
 
+    <title>Dnautique - Contact</title>
 </head>
 <body>
 
@@ -20,7 +82,7 @@
     <div class="container">
 
         <a href="./index.php" class="navbar-brand">
-            <img src="./Sources/LOGO.svg" width="48" alt="" class="d-inline-block align-middle mr-2">
+            <img src="../Sources/LOGO.svg" width="48" alt="" class="d-inline-block align-middle mr-2">
             <span class="font-weight-bold" style="color: #1c306e ;">D</span><span class="font-weight-bold" style="color: #1880ad ;">nautique</span>
         </a>
         <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
@@ -30,75 +92,73 @@
         <div id="navbarContent" class="collapse navbar-collapse">
 
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a href="./index.php" class="nav-link font-weight-bold text-uppercase">Accueil</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link font-weight-bold text-uppercase dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" >Nos locations</a>
-                    <div class="dropdown-menu" >
-                        <a class="dropdown-item font-weight-bold" href="../Location/Bateaux%200"><i class="fa-solid fa-ship"></i> Bateau 1</a>
-                        <a class="dropdown-item font-weight-bold" href="../Location/Bateaux%200"><i class="fa-solid fa-ship"></i> Bateau 2 </a>
-                    </div>
-                </li>
-                <li class="nav-item"><a href="./Contact/index.php" class="nav-link font-weight-bold text-uppercase">Contactez-nous</a></li>
+
+
+
+                <li class="nav-item"><a href="../index.php" class="nav-link font-weight-bold text-uppercase">Accueil</a></li>
+                <li class="nav-item"><a href="../Bateaux%200/index.php" class="nav-link font-weight-bold text-uppercase">Locations</a></li>
+                <li class="nav-item"><a href="../Contact/index.php" class="nav-link font-weight-bold text-uppercase">Contactez-nous</a></li>
             </ul>
         </div>
 </nav>
 
+<!-- Accueil -->
 
-<!-- Background video -->
-<div class="video-background-holder" id="accueil">
-    <div class="video-background-overlay"></div>
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-        <source src="./Sources/Vidéo/ile-2946.mp4" type="video/mp4">
-    </video>
-    <div class="video-background-content container h-100">
-        <div class="d-flex h-100 text-center align-items-center">
-            <div class="w-100 text-white">
-                <h1 class="display-4"> <span class="underline--magical">Dnautique</h1></span>
-                </p>
+
+
+<section id="banner" class="parallax">
+    <h1> Vous avez un problème, Dnautique est là pour vous ! </h1>
+</section>
+
+<!--  Contact -->
+
+<section class=" text-black mb-0" id="contact">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-10 mx-auto">
+                <form action="index.php" method="POST">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nom">Nom</label>
+                            <input type="text" class="form-control" id="nom" name="nom" placeholder="Votre nom">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="mail">Mail</label>
+                            <input type="email" class="form-control" id="mail" name="mail" placeholder="Votre mail">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="phone">Téléphone</label>
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Ex : 06 00 00 00 01">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="exampleFormControlSelect1">Motifs</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="motifs">
+                                <option>Coque</option>
+                                <option>Électrique/Électronique</option>
+                                <option>Plomberie</option>
+                                <option>Nettoyage</option>
+                                <option>Autres services</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-primary btn-lg btn-block"  name="mailform"></button>
+                </form>
+                <p class="text-center"> <?php if(isset($msg)) {
+                        echo $msg;
+                    }
+                    ?>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-
-
-<div class="servicetitle">
-    <span>Nos locations </span>
-</div>
-
-<!-- partial:index.partial.html -->
-<div class="blog-slider">
-  <div class="blog-slider__wrp swiper-wrapper">
-    <div class="blog-slider__item swiper-slide">
-      <div class="blog-slider__img">
-
-        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
-      </div>
-      <div class="blog-slider__content">
-        <span class="blog-slider__code">26 December 2019</span>
-        <div class="blog-slider__title">Lorem Ipsum Dolor</div>
-        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
-        <a href="Bateaux 0/index.php" class="blog-slider__button">READ MORE</a>
-      </div>
-    </div>
-    <div class="blog-slider__item swiper-slide">
-      <div class="blog-slider__img">
-        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp" alt="">
-      </div>
-      <div class="blog-slider__content">
-        <span class="blog-slider__code">26 December 2019</span>
-        <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
-        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-        <a href="Bateaux%201/index.php" class="blog-slider__button">READ MORE</a>
-      </div>
-    </div>
-
-
-  </div>
-  <div class="blog-slider__pagination"></div>
-</div>
-
-</div>
 
 <!-- Footer -->
 <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -249,17 +309,10 @@
     </div>
 </div>
 
-
-
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
-<script  src="script.js"></script>
-<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
-<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
-<script src="https://kit.fontawesome.com/f2676de47d.js" crossorigin="anonymous"></script>
-
-</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="app.js"></script>
 </body>
 </html>

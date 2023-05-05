@@ -5,7 +5,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Responsive Blog Card Slider </title>
+  <title>Dnautique - Bateau </title>
   <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
@@ -20,20 +20,30 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg py-3 navbar-light bg-light shadow-sm fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
     <div class="container">
         <a href="./index.php" class="navbar-brand">
-            <img src="./Sources/LOGO.svg" width="45" alt="" class="d-inline-block align-middle mr-2">
+            <img src="../Sources/LOGO.svg" width="40" alt="" class="d-inline-block align-middle mr-2">
+
             <span class="font-weight-bold" style="color: #1c306e ;">D</span><span class="font-weight-bold" style="color: #1880ad ;">nautique</span>
         </a>
+    <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+    <div id="navbarContent" class="collapse navbar-collapse">
 
-        <div id="navbarSupportedContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="" class="nav-link"> Accueil <span class="sr-only">(current)</span></a></li>
-            </ul>
-        </div>
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a href="../index.php" class="nav-link font-weight-bold text-uppercase">Accueil</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link font-weight-bold text-uppercase dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" >Nos locations</a>
+                <div class="dropdown-menu" >
+                    <a class="dropdown-item font-weight-bold" href="#"><i class="fa-solid fa-ship"></i> Bateau 1</a>
+                    <a class="dropdown-item font-weight-bold" href="../Bateaux%201/index.php"><i class="fa-solid fa-ship"></i> Bateau 2 </a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="../Contact/index.php" class="nav-link font-weight-bold text-uppercase">Contactez-nous</a></li>
+        </ul>
     </div>
 </nav>
 
@@ -186,7 +196,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a class="collapsed card-link no_scroll_f" data-toggle="collapse" href="#collapseFour">
-                                <h2><span class="ti-anchor"> <i class="fa-solid fa-ship"></i></span>Intéressé à acheter?</h2>
+                                <h2><span class="ti-anchor"> <i class="fa-solid fa-ship"></i></span>Intéressé pour acheter ?</h2>
                                 <span class="card_view"></span>
                             </a>
                         </div>
@@ -290,6 +300,103 @@
     </div>
     <!-- Copyright -->
 </footer>
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Mentions légales du site</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="Titlemls">
+                    <span>-- Mentions légales du site --</span>
+                </div>
+                <div class="Contentmls">
+                <span>
+                    <p style="text-align: center;">
+                        <strong>1. Présentation du site.</strong>
+                    </p>
+                    <p>
+                        En application de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique,
+                        il est précisé aux utilisateurs du site <a href="https://dnautique.fr/">https://dnautique.fr/</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :
+                    </p>
+                    <p>
+                        <strong>Propriétaire</strong> : Julien Dran<br>
+                        <strong>Créateur</strong> : Julien Dran<br>
+                        <strong>Responsable publication</strong> : Dnautique<br>
+                        <strong>Webmaster</strong> : Roux Alexandre <br>
+                        <strong>Hébergeur</strong> : HOSTINGER INTERNATIONAL LTD, 61 Lordou Vironos Street, 6023 Larnaca, Chypre <br>
+                        <strong>Siren</strong> : 917 874 562<br>
+                        <strong>Siret</strong> :  917 874 562  00015<br>
+                        <strong>Crédits</strong> : <a href="https://www.pexels.com/fr-fr/">https://www.pexels.com/fr-fr/</a><br>
+                        <strong>Numéro de téléphone</strong> :  07.65.28.36.28 <br>
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <p style="text-align: center;"> ............................................................................................</p><br>
+            <div class="TitleConfi">
+                <span>-- Confidentialité --</span>
+            </div>
+
+            <div class="Contconf">
+                <span>
+                    <p style="text-align: center;">
+                        <strong>2.Confidentialité des données</strong>
+                    </p>
+                    <p style="text-align: center;">
+                        <span>Nous nous engageons à protéger vos données personnelles et votre vie privée. Nous utilisons les informations que vous nous transmettez pour traiter vos demandes et
+                        vous faire part de notre réponse.</span>
+                    </p>
+                </span>
+            </div>
+
+            <p style="text-align: center;"> ............................................................................................</p><br>
+            <div class="Titlepers">
+                <span>-- Vos données personnelles à des tiers --</span>
+            </div>
+            <div class="Contcomm">
+                <span>
+                    <p style="text-align: center;">
+                        <strong>3. Vos données personnelles à des tiers</strong>
+                    </p>
+                    <p style="text-align: center;">
+                            <span>Nous ne vendons, ni ne louons, ni ne communiquons les informations vous concernant.
+                        </span>
+                    </p>
+                </span>
+            </div>
+
+            <p style="text-align: center;"> ............................................................................................</p><br>
+            <div class="Titlecomm">
+                <span>-- Modification de vos informations --</span>
+            </div>
+            <div class="Continfo">
+                        <span>
+                            <p style="text-align: center;">
+                                <strong>4. Modification de vos informations</strong>
+                            </p>
+                            <p style="text-align: center;">
+                                <span>En application de la loi du 11 mars 1957 (art. 41) et du Code de la propriété intellectuelle du 1er juillet 1992 : l’ensemble des textes, illustrations,
+                                    photographies, plans, dessins, animations, vidéos, contenus sur ce site ne peuvent être utilisés ou reproduits sans l’autorisation de l’éditeur.
+                                </span>
+                            </p>
+                        </span>
+            </div>
+            <p style="text-align: center;"> ............................................................................................</p><br>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- partial -->
 <script src="https://kit.fontawesome.com/f2676de47d.js" crossorigin="anonymous"></script>
