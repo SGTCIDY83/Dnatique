@@ -67,10 +67,13 @@ $msg='
     <!-- End Google Analytics -->
 
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../ressources/Dnautique.svg" type="image/x-icon">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="google-site-verification" content="7qVPvHOgnfw_RPPYYq805gF-p8nF2UYJTGjh0r_cyO0" />
 
@@ -81,8 +84,8 @@ $msg='
 
 <nav class="navbar navbar-expand-lg py-3 navbar-light bg-light shadow-sm fixed-top">
   <div class="container">
-    <a href="./index.php" class="navbar-brand">
-      <img src="Location/Sources/LOGO.svg" width="45" alt="" class="d-inline-block align-middle mr-2">
+    <a href="index.php" class="navbar-brand">
+      <img src="../Location/Sources/LOGO.svg" width="45" alt="" class="d-inline-block align-middle mr-2">
       <span class="font-weight-bold" style="color: #1c306e ;">D</span><span class="font-weight-bold" style="color: #1880ad ;">nautique</span>
     </a>
 
@@ -91,7 +94,7 @@ $msg='
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active"><a href="" class="nav-link">Accueil <span class="sr-only">(current)</span></a></li>
-        <li class="nav-item"><a href="./PHP/services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="PHP/services.html" class="nav-link">Services</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </div>
@@ -99,41 +102,44 @@ $msg='
 </nav>
       <!-- Accueil -->
       <div id="Accueil"class="bgimg-1" >
-          <img id="imgProfileAcc" src="./ressources/Dnautique.svg">
+          <div class="arrow-container">
+              <div class="arrow" id="arrow"></div>
+          </div>
+          <img id="imgProfileAcc" src="../ressources/Dnautique.svg">
         </div>
     </div>
 </div>
 <!-- Services -->
 
 <div class="Services" id="nosservices">
-    <h2 >Nos services</h2>
+    <h2 data-aos="fade-up" >Nos services</h2>
         <div class="container">
 
           <div class="row">
 
-            <div class="col-lg-4 col-md-6 col-12" >
-            <a href="./PHP/services.html">
+            <div data-aos="fade-right" class="col-lg-4 col-md-6 col-12" >
+            <a href="PHP/services.html">
               <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="./ressources/Maintenance.jpg" style="width: 314px; height: 210px;">
+              <img class="card-img-top" src="../ressources/Maintenance.jpg" style="width: 314px; height: 210px;">
                 <div class="card-body">
                   <h4>Maintenance</h4></a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-12">
-            <a href="./PHP/services.html">
+            <div data-aos="fade-up" class="col-lg-4 col-md-6 col-12">
+            <a href="PHP/services.html">
               <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="./ressources/rénovation.jpg" style="width: 314px; height: 210px;" >
+                <img class="card-img-top" src="../ressources/rénovation.jpg" style="width: 314px; height: 210px;" >
                 
                 <div class="card-body">
                   <h4>Rénovation</h4></a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-12">
-            <a href="./PHP/services.html">
+            <div data-aos="fade-left" class="col-lg-4 col-md-6 col-12">
+            <a href="PHP/services.html">
               <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="./ressources/dépannage.jpg" style="width: 314px; height: 210px;">
+                <img class="card-img-top" src="../ressources/dépannage.jpg" style="width: 314px; height: 210px;">
                 <div class="card-body">
                 <h4>Dépannage</h4></a>
                 
@@ -144,10 +150,10 @@ $msg='
         </div>
       </div>   
     <div class="servicetitle">
-          <span> Découvrez toutes nos prestations </span>
+          <span > Découvrez toutes nos prestations </span>
     </div>
         <div class="containerservice" >
-          <a href="./PHP/services.html">
+          <a href="PHP/services.html">
             <button><span>Tous nos services </span></button></a>
     </div>
      <section id="banner" class="parallax">
@@ -353,10 +359,15 @@ $msg='
   </div>
 </div>
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="app.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>

@@ -6,7 +6,9 @@
   <title>Dnautique - Locations</title>
   <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'><link rel="stylesheet" href="./style.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="/Dnatique/ressources/Dnautique.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -53,32 +55,36 @@
     <div class="video-background-content container h-100">
         <div class="d-flex h-100 text-center align-items-center">
             <div class="w-100 text-white">
-                <h1 class="display-4"> <span class="underline--magical">Dnautique</h1></span>
+                <h1 class="display-4" data-aos="zoom-in"> <span class="underline--magical">Dnautique</h1></span>
                 </p>
             </div>
+        </div>
+        <div class="arrow-container">
+            <h1>Arrow fade out on scroll</h1>
+            <div class="arrow" id="arrow"></div>
         </div>
     </div>
 </div>
 
 
 
-<div class="servicetitle">
-    <span>Nos locations </span>
+<div data-aos="fade-up" class="servicetitle">
+    <span>Nos locations</span>
 </div>
 
 <!-- partial:index.partial.html -->
-<div class="blog-slider">
+<div data-aos="fade-left" class="blog-slider">
   <div class="blog-slider__wrp swiper-wrapper">
     <div class="blog-slider__item swiper-slide">
       <div class="blog-slider__img">
 
-        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+        <img src="/Dnatique/ressources/Images-bateaux/image00022.jpeg" alt="">
       </div>
       <div class="blog-slider__content">
         <span class="blog-slider__code">26 December 2019</span>
         <div class="blog-slider__title">Lorem Ipsum Dolor</div>
         <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
-        <a href="Bateaux 0/index.php" class="blog-slider__button">READ MORE</a>
+        <a href="Bateaux 0/index.php" class="blog-slider__button">Notre bateau</a>
       </div>
     </div>
     <div class="blog-slider__item swiper-slide">
@@ -89,7 +95,7 @@
         <span class="blog-slider__code">26 December 2019</span>
         <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
         <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-        <a href="Bateaux%201/index.php" class="blog-slider__button">READ MORE</a>
+        <a href="Bateaux%201/index.php" class="blog-slider__button">Notre bateau</a>
       </div>
     </div>
 
@@ -259,7 +265,10 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
 <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
 <script src="https://kit.fontawesome.com/f2676de47d.js" crossorigin="anonymous"></script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </body>
 </html>

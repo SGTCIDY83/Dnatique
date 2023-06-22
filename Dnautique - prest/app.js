@@ -1,16 +1,12 @@
-var swiper = new Swiper('.blog-slider', {
-      spaceBetween: 30,
-      effect: 'fade',
-      loop: true,
-      mousewheel: {
-        invert: false,
-      },
-      // autoHeight: true,
-      pagination: {
-        el: '.blog-slider__pagination',
-        clickable: true,
-      }
-    });
+const allNavItems = document.querySelectorAll('.nav-item');
+const navbar = document.querySelector('.navbar-collapse');
+
+
+allNavItems.forEach(item => item.addEventListener('click', () => {
+
+    navbar.classList.toggle('show');
+
+}));
 
 window.onscroll = function () {
     let scrollPos = window.scrollY;

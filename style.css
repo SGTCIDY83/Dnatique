@@ -1,292 +1,152 @@
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  font-family: "Gill Sans", sans-serif;
-}
-/* Menu */
-.navbar {
-  border-bottom: 1px solid #1c306e;
-}
-
-
-/* Fond Accueil */
-.bgimg-1 {
-  position: relative;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,800");
+html, body {
   height: 100%;
-  margin: auto;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100%;
-  background-image: url("./ressources/Fond d'ecran accueil.jpg");
+  min-height: 18em;
 }
 
-/* Image Dnautique */
-#imgProfileAcc{
-  width: 350px;
+.frontend-side {
+  background-image: url("./ressources/Images services/Elec.jpg");
+}
+.frontend-side button:hover {
+  color: violet;
+}
+
+.uiux-side {
+  background-image: url("ressources/Images-bateaux/image00022.jpeg");
+}
+.uiux-side button:hover {
+  color: #005de3;
+}
+
+.split-pane {
+  padding-top: 1em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 50%;
+  min-height: 9em;
+  font-size: 2em;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+@media (min-width: 500px) {
+  .split-pane {
+    padding-top: 2em;
+    height: 100%;
+  }
+}
+.split-pane div {
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.split-pane div button {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 0.5em;
+  padding: 0.8em;
+  font-weight: bold;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+@media (max-width: 500px) {
+  .split-pane div button {
+    font-size: 0.4em;
+  }
+}
+.split-pane div button:hover {
+  background: #fff;
+  text-decoration: none;
+}
+.split-pane div .text-content {
+  line-height: 1.6em;
+  margin-bottom: 1em;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.split-pane div .text-content .bold {
+  font-size: 0.6em;
+  text-transform: uppercase;
+}
+@media (max-width: 500px) {
+  .split-pane div .text-content .bold {
+    font-size: 0.4em;
+  }
+}
+.split-pane div .text-content .big {
+  font-size: 2em;
+  font-weight: 800;
+}
+@media (max-width: 500px) {
+  .split-pane div .text-content .big {
+    font-size: 1.5em;
+  }
+}
+
+.split-pane-line {
+  color: white;
+  border-radius: 75%;
+  width: 100%;
+  top: 45%;
+  transform: translateY(-50%);
+  position: absolute;
+  text-align: center;
+}
+.split-pane-line img {
+  height: 8em;
   border-radius: 75%;
 }
-
-
-/* Footer */
-.waves {
-  position: relative;
-  width: 100%;
-  height: 15vh;
-  margin-bottom: -7px;
-  
-  min-height: 100px;
-  max-height: 400px;
-}
-/* Animation */
-.parallax>use {
-  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
-}
-.parallax>use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax>use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax>use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax>use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@keyframes move-forever {
-  0% {
-    transform: translate3d(-90px, 0, 0);
-  }
-  100% {
-    transform: translate3d(85px, 0, 0);
-  }
-}
-/* Media*/
-@media (max-width: 768px) {
-  .waves {
-    height: 40px;
-    min-height: 40px;
-  }
-  .content {
-    height: 30vh;
+@media (max-width: 500px) {
+  .split-pane-line img {
+    height: 3em;
   }
 }
 
-
-
-
-/* Prestations de services */
-
-.h1,h1{
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 20px;
-}
-#banner {
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);  padding: 75px 0px 75px 0px;
-  margin-bottom: 50px;
-  text-align: center;
-
+@media (min-width: 500px) {
+  .col-sm-6 {
+    width: 50%;
+  }
 }
 
-
-/* Nos Services Titre */
-
-.h2, h2 {
-  text-align: center;
-  font-size: 60px;
-  background-image: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  padding-bottom: 40px ;
-  padding-top: 40px ;
+.credits footer {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  text-align: right;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
 }
-
-/* Nos prestations titre  */
-
-.servicetitle{
-  text-align: center;
-  font-size: 60px;
-  font-weight: 650;
-  background-image: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  padding-bottom: 50px ;
-
-}
-
-/* Titre card  */
-
-.h4,h4 {
-  text-align: center;
-  font-size: 38px;
-  font-weight: 600;
-  background-image: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-/* Card service */
-
-.card{
-  overflow: hidden;
+.credits footer p {
+  border: none;
   padding: 0;
- border-radius: 20px;
-  transition: transform .5s ease-in-out;
 }
-
-.card:hover{
-  transform: scale(1.1);
-  border-color: #1c306e;
+.credits footer p strong {
+  font-size: 2em;
+  text-decoration: none;
 }
-
-/*Bouton nos services */
-.container{
-  padding-left: 66px;
-  padding-right: 66px;
+.credits footer p strong:hover {
+  color: #ff0909;
+  transition: all 0.4s ease-in-out;
+  font-weight: 1500;
+  font-size: 4em;
 }
-
-
-.containerservice{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin-bottom: 40px;
- 
+.credits footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.9s ease-in-out;
 }
-
-.containerservice button{
-  height:60px;
-  width:340px;
-  background-color:#6C5F5F;
-  border:none;
-  position:relative;
-  overflow:hidden;
-  color:#fff;
-  font-size:15px;
-  border-radius:3px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  cursor:pointer;
-}
-
-.containerservice button span{
-  z-index:10;
-  
-}
-
-.containerservice button:hover:after{
-  position:absolute;
-  content:'';
-  border-radius:1px;
-  background-color:#1c306e;
-  height:400px;
-  width:400px;
-  top:-12px;
-  left:-13px;
-
-}
-
-.containerservice button:after{
-  position:absolute;
-  content:'';
-  border-radius:30% 70% 70% 30% / 30% 22% 78% 70%;
-  background-color: #1c306e;
-  height:70px;
-  width:80px;
-  top:-12px;
-  left:-13px;
-  transition:all 1s;
-}
-
-
-  /* Mentions légales du site */
-
-  .Titlemls{
-    text-align: center;
-    font-size: 30px;
-    font-weight: 650;
-    background-image: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    padding-bottom: 50px ;
-  }
-
-  .TitleConfi{
-  text-align: center;
-  font-size: 30px;
-  font-weight: 650;
-  background-image: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  padding-bottom: 50px ;
-}
-
-
-.Titlepers{
-  text-align: center;
-  font-size: 24px;
-  font-weight: 650;
-  background-image: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  padding-bottom: 50px ;
-
-}
-
-.Titlecomm{
-  text-align: center;
-  font-size: 24px;
-  font-weight: 650;
-  background-image: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  padding-bottom: 50px ;
-
-}
-
-.font-weight-bold::first-letter{
-  color: #1c306e;
-}
-
-
-.text-muted{
-  color: rgb(114, 137, 218);
-}
-
-.h7,h7{
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 20px;
-  /* effet de survol texte */
-
-}
-.h7:hover{
-   transition: opacity 0.9s;
-    opacity: 0.5;
-
+.credits footer a:hover {
+  color: #ff2222;
+  font-weight: 900;
+  font-size: 1.5em;
 }
